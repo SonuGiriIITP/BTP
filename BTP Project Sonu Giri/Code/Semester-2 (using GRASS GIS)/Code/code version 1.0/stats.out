@@ -1,0 +1,207 @@
+Free Memory=-1
+[0.0] Sun Apr 14 01:52:53 2013
+Command Line: 
+r.terraflow --o direction=DEM_flow_direction elevation=test_DEM@user1 tci=DEM_tci swatershed=DEM_sink_watershed accumulation=DEM_flow_accum filled=flooded_DEM 
+input elevation grid: test_DEM
+output (flooded) elevations grid: flooded_DEM
+output directions grid: DEM_flow_direction
+output sinkwatershed grid: DEM_sink_watershed
+output accumulation grid: DEM_flow_accum
+output tci grid: DEM_tci
+[0.0] MFD flow direction
+[0.0] D8CUT=999999986991104.000000
+[0.0] Memory size: 300.00M (314572800) bytes
+region size = 2.29M (2403201) elts (2001 rows x 1201 cols)
+internal nodata value: -9999
+Reading raster map <test_DEM> to stream </var/tmp//STREAM_dB5LdU>.
+[0.3] TIME reading raster map: [0.20u (76%) 0.02s (9%) 0.27 85.3%]
+[0.3] ------------------------------
+[0.3] COMPUTING FLOW DIRECTIONS
+[0.3] classifying nodata (inner & boundary)
+[0.3] finding nodata
+nodata stream length = 0
+nodata stream name: /var/tmp//STREAM_Egiact
+[1.8] TIME classifyNodata::generate nodata: [1.17u (80%) 0.16s (11%) 1.47 91.1%]
+[1.8] relabeling nodata
+[1.8] LEN pre-sort: 0 elts 0 bytes [AMI_STREAM /var/tmp//STREAM_Egiact 0]
+[1.8] LEN sort: 0 elts 0 bytes [AMI_STREAM /var/tmp//STREAM_AttkTz 0]
+[1.8] TIME sort: [0.00u (0%) 0.00s (0%) 0.01 0.0%]
+[1.8] TIME classifyNodata::relabeling: [0.00u (0%) 0.00s (0%) 0.01 0.0%]
+[1.8] merging relabeled grid
+[1.8] LEN pre-sort: 0 elts 0 bytes [AMI_STREAM /var/tmp//STREAM_LRD8ha 0]
+[1.8] LEN sort: 0 elts 0 bytes [AMI_STREAM /var/tmp//STREAM_QGa1GK 0]
+[1.8] TIME sort: [0.00u (0%) 0.00s (0%) 0.00 0.0%]
+[2.0] TIME classifyNodata::merge: [0.19u (95%) 0.01s (6%) 0.20 101.2%]
+[2.0] ----------
+[2.0] assigning preliminary directions
+[2.0] ----------
+[2.0] finding flat areas (plateaus and depressions)
+[2.7] TIME findPlateaus::generate plateaus: [0.74u (96%) 0.03s (4%) 0.77 100.0%]
+[2.7] LEN plateaus: 1.64M (1719742) elts 19.68M (20636904) bytes [AMI_STREAM /var/tmp//STREAM_347aRU 1719742]
+[2.7] removing duplicate plateaus
+[2.7] LEN pre-sort: 1.64M (1719742) elts 19.68M (20636904) bytes [AMI_STREAM /var/tmp//STREAM_347aRU 1719742]
+[3.6] LEN sort: 1.64M (1719742) elts 19.68M (20636904) bytes [AMI_STREAM /var/tmp//STREAM_8NTPZy 1719742]
+[3.6] TIME sort: [0.36u (39%) 0.06s (6%) 0.91 45.4%]
+[3.8] TIME findPlateaus::removing duplicates: [0.49u (46%) 0.08s (8%) 1.06 53.5%]
+[3.8] LEN plateaus: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_ZDRUze 992442]
+[3.8] relabeling plateaus
+[3.8] LEN pre-sort: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_ZDRUze 992442]
+[3.9] LEN sort: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_ieMEVU 992442]
+[3.9] TIME sort: [0.10u (76%) 0.03s (23%) 0.14 99.6%]
+[3.9] LEN pre-sort: 52.51K (53767) elts 420.05K (430136) bytes [AMI_STREAM /var/tmp//STREAM_xt3QVI 53767]
+[3.9] LEN sort: 52.51K (53767) elts 420.05K (430136) bytes [AMI_STREAM /var/tmp//STREAM_e0y1vE 53767]
+[3.9] TIME sort: [0.00u (62%) 0.00s (62%) 0.01 124.1%]
+[4.2] LEN pre-sort: 31.49K (32244) elts 251.91K (257952) bytes [AMI_STREAM /var/tmp//STREAM_KEhuTj 32244]
+[4.2] LEN sort: 31.49K (32244) elts 251.91K (257952) bytes [AMI_STREAM /var/tmp//STREAM_abC6W1 32244]
+[4.2] TIME sort: [0.00u (90%) 0.00s (0%) 0.00 89.9%]
+[4.2] LEN pre-sort: 231 elts 1.80K (1848) bytes [AMI_STREAM /var/tmp//STREAM_0t9eIh 231]
+[4.2] LEN sort: 231 elts 1.80K (1848) bytes [AMI_STREAM /var/tmp//STREAM_sM0Z3N 231]
+[4.2] TIME sort: [0.00u (0%) 0.00s (0%) 0.00 0.0%]
+[4.4] TIME ccforest::findAllRoots: 0 secs
+[4.4] LEN pre-sort: 31.49K (32244) elts 251.91K (257952) bytes [AMI_STREAM /var/tmp//STREAM_5C2KYI 32244]
+[4.4] LEN sort: 31.49K (32244) elts 251.91K (257952) bytes [AMI_STREAM /var/tmp//STREAM_Sgs4Hc 32244]
+[4.4] TIME sort: [0.00u (119%) 0.00s (0%) 0.00 119.3%]
+[4.4] TIME ccforest::findAllRoots: 0 secs
+[4.5] TIME findPlateaus::relabeling: [0.30u (44%) 0.38s (55%) 0.69 99.4%]
+[4.5] LEN plateaus: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_THZUjB 992442]
+[4.5] generating plateau statistics
+[4.5] LEN pre-sort: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_THZUjB 992442]
+[4.6] LEN sort: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_RwBITU 992442]
+[4.6] TIME sort: [0.08u (69%) 0.03s (29%) 0.11 98.2%]
+[4.7] TIME findPlateaus::generating stats: [0.14u (78%) 0.04s (22%) 0.18 99.8%]
+[4.7] LEN plateaus: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_RwBITU 992442]
+[4.7] TIME findingPlateaus: [1.67u (62%) 0.54s (20%) 2.71 81.5%]
+[4.7] LEN plateaus: 969.18K (992442) elts 11.36M (11909304) bytes [AMI_STREAM /var/tmp//STREAM_RwBITU 992442]
+[4.7] LEN plateau stats: 108.52K (111123) elts 2.12M (2222460) bytes [AMI_STREAM /var/tmp//STREAM_mlwhY7 111123]
+[4.7] ----------
+[4.7] assigning directions on plateaus
+depression count = 11827
+spill count = 99296
+[5.0] TIME assigning directions: [0.32u (96%) 0.01s (4%) 0.33 99.6%]
+maxWatershedCount=11829
+[5.0] LEN pre-sort: 969.18K (992442) elts 15.14M (15879072) bytes [AMI_STREAM /var/tmp//STREAM_UEKikD 992442]
+[5.3] LEN sort: 969.18K (992442) elts 15.14M (15879072) bytes [AMI_STREAM /var/tmp//STREAM_NLzMmn 992442]
+[5.3] TIME sort: [0.24u (88%) 0.03s (12%) 0.27 100.5%]
+[5.7] TIME merging: [0.65u (90%) 0.07s (10%) 0.73 99.8%]
+[5.7] LEN mergedWaterStr: 2.29M (2403201) elts 36.67M (38451216) bytes [AMI_STREAM /var/tmp//STREAM_SMp4r7 2403201]
+[5.7] --------------
+[5.7] generating watersheds and watershed graph
+[5.7] creating windows
+[5.7] warning: using slower scan
+[8.0] TIME creating windows: [1.75u (78%) 0.32s (14%) 2.25 91.9%]
+[8.0] LEN waterWindows: 2.29M (2403201) elts 128.34M (134579256) bytes [AMI_STREAM /var/tmp//STREAM_7WBONS 2403201]
+[8.0] generateWatersheds
+[8.0] LEN pre-sort: 2.29M (2403201) elts 128.34M (134579256) bytes [AMI_STREAM /var/tmp//STREAM_7WBONS 2403201]
+[11.2] LEN sort: 2.29M (2403201) elts 128.34M (134579256) bytes [AMI_STREAM /var/tmp//STREAM_mzt6Fx 2403201]
+[11.2] TIME sort: [1.36u (42%) 0.36s (11%) 3.26 52.7%]
+[11.4] starting generate watersheds main loop
+[19.1] done with generate watersheds
+[19.1] TIME generating watersheds: [8.96u (81%) 0.60s (5%) 11.13 86.0%]
+[19.1] LEN pre-sort: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_6dqNlK 2403201]
+[20.1] LEN sort: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_uStK5V 2403201]
+[20.1] TIME sort: [0.53u (54%) 0.10s (10%) 0.99 63.4%]
+[20.1] creating windows
+[21.7] LEN all boundaries: 2.38M (2499735) elts 38.14M (39995760) bytes [AMI_STREAM /var/tmp//STREAM_DRR93k 2499735]
+[21.7] LEN pre-sort: 2.38M (2499735) elts 38.14M (39995760) bytes [AMI_STREAM /var/tmp//STREAM_DRR93k 2499735]
+[22.9] LEN sort: 2.38M (2499735) elts 38.14M (39995760) bytes [AMI_STREAM /var/tmp//STREAM_41rqCP 2499735]
+[22.9] TIME sort: [0.38u (31%) 0.14s (11%) 1.23 41.8%]
+[23.0] TIME generating boundaries: [1.89u (64%) 0.32s (11%) 2.94 75.4%]
+[23.0] LEN boundary stream: 35.27K (36117) elts 564.33K (577872) bytes [AMI_STREAM /var/tmp//STREAM_1A8Tim 36117]
+[23.0] LEN pre-sort: 35.27K (36117) elts 564.33K (577872) bytes [AMI_STREAM /var/tmp//STREAM_1A8Tim 36117]
+[23.0] LEN sort: 35.27K (36117) elts 564.33K (577872) bytes [AMI_STREAM /var/tmp//STREAM_u2GCoT 36117]
+[23.0] TIME sort: [0.01u (131%) 0.00s (0%) 0.01 131.4%]
+[23.0] ----------
+[23.0] flooding depressions
+[23.0] TIME filling depressions: [0.01u (125%) 0.00s (0%) 0.01 125.4%]
+[23.3] TIME updating filled grid: [0.19u (90%) 0.02s (9%) 0.21 99.8%]
+[23.3] LEN filledstr: 2.29M (2403201) elts 9.17M (9612804) bytes [AMI_STREAM /var/tmp//STREAM_DLh7uq 2403201]
+[23.3] ------------------------------
+[23.3] REASSIGNING DIRECTIONS
+[23.3] ----------
+[23.3] finding flat areas (plateaus and depressions)
+[24.0] TIME findPlateaus::generate plateaus: [0.74u (97%) 0.02s (3%) 0.76 99.9%]
+[24.0] LEN plateaus: 1.71M (1792428) elts 20.51M (21509136) bytes [AMI_STREAM /var/tmp//STREAM_UYD0X8 1792428]
+[24.0] removing duplicate plateaus
+[24.0] LEN pre-sort: 1.71M (1792428) elts 20.51M (21509136) bytes [AMI_STREAM /var/tmp//STREAM_UYD0X8 1792428]
+[24.8] LEN sort: 1.71M (1792428) elts 20.51M (21509136) bytes [AMI_STREAM /var/tmp//STREAM_jQMDPJ 1792428]
+[24.8] TIME sort: [0.35u (42%) 0.07s (9%) 0.83 50.9%]
+[25.0] TIME findPlateaus::removing duplicates: [0.49u (49%) 0.10s (10%) 1.00 58.9%]
+[25.0] LEN plateaus: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_YNEzUl 1194985]
+[25.0] relabeling plateaus
+[25.0] LEN pre-sort: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_YNEzUl 1194985]
+[25.2] LEN sort: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_ZkGkQY 1194985]
+[25.2] TIME sort: [0.14u (87%) 0.02s (13%) 0.16 99.3%]
+[25.2] LEN pre-sort: 81.42K (83369) elts 651.32K (666952) bytes [AMI_STREAM /var/tmp//STREAM_wrfSz3 83369]
+[25.2] LEN sort: 81.42K (83369) elts 651.32K (666952) bytes [AMI_STREAM /var/tmp//STREAM_3E58Mu 83369]
+[25.2] TIME sort: [0.01u (126%) 0.00s (0%) 0.01 125.8%]
+[25.4] LEN pre-sort: 31.78K (32544) elts 254.25K (260352) bytes [AMI_STREAM /var/tmp//STREAM_fnzUgB 32544]
+[25.4] LEN sort: 31.78K (32544) elts 254.25K (260352) bytes [AMI_STREAM /var/tmp//STREAM_pHXcrL 32544]
+[25.4] TIME sort: [0.00u (86%) 0.00s (0%) 0.00 86.4%]
+[25.4] LEN pre-sort: 231 elts 1.80K (1848) bytes [AMI_STREAM /var/tmp//STREAM_jqKTNe 231]
+[25.4] LEN sort: 231 elts 1.80K (1848) bytes [AMI_STREAM /var/tmp//STREAM_H47YZj 231]
+[25.4] TIME sort: [0.00u (0%) 0.00s (0%) 0.00 0.0%]
+[25.6] TIME ccforest::findAllRoots: 0 secs
+[25.6] LEN pre-sort: 31.78K (32544) elts 254.25K (260352) bytes [AMI_STREAM /var/tmp//STREAM_khuP4o 32544]
+[25.6] LEN sort: 31.78K (32544) elts 254.25K (260352) bytes [AMI_STREAM /var/tmp//STREAM_DrEeSB 32544]
+[25.6] TIME sort: [0.00u (115%) 0.00s (0%) 0.00 115.3%]
+[25.6] TIME ccforest::findAllRoots: 0 secs
+[25.8] TIME findPlateaus::relabeling: [0.40u (54%) 0.34s (46%) 0.74 99.4%]
+[25.8] LEN plateaus: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_q7b5OB 1194985]
+[25.8] generating plateau statistics
+[25.8] LEN pre-sort: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_q7b5OB 1194985]
+[25.9] LEN sort: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_I2ZIMg 1194985]
+[25.9] TIME sort: [0.10u (77%) 0.03s (25%) 0.13 101.7%]
+[26.0] TIME findPlateaus::generating stats: [0.18u (83%) 0.04s (17%) 0.21 100.0%]
+[26.0] LEN plateaus: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_I2ZIMg 1194985]
+[26.0] TIME findingPlateaus2: [1.80u (66%) 0.49s (18%) 2.71 84.6%]
+[26.0] LEN final plateaus: 1.14M (1194985) elts 13.68M (14339820) bytes [AMI_STREAM /var/tmp//STREAM_I2ZIMg 1194985]
+[26.0] LEN final plateau stats: 81.53K (83490) elts 1.59M (1669800) bytes [AMI_STREAM /var/tmp//STREAM_H8rTSv 83490]
+[26.0] ----------
+[26.0] assigning directions on plateaus
+depression count = 0
+spill count = 83490
+[26.3] TIME final directions: [0.35u (98%) 0.00s (1%) 0.36 98.9%]
+[26.3] creating flowStream: [AMI_STREAM /var/tmp//flowStream 0]
+[26.3] LEN pre-sort: 1.14M (1194985) elts 18.23M (19119760) bytes [AMI_STREAM /var/tmp//STREAM_Hy5TXV 1194985]
+[26.7] LEN sort: 1.14M (1194985) elts 18.23M (19119760) bytes [AMI_STREAM /var/tmp//STREAM_SA2FXC 1194985]
+[26.7] TIME sort: [0.27u (85%) 0.04s (14%) 0.32 98.4%]
+[27.3] TIME merge water,dir,elev to flow: [0.70u (70%) 0.08s (8%) 0.99 78.7%]
+[27.3] TIME Total compute flow direction running time: [20.19u (75%) 2.74s (10%) 27.03 84.9%]
+[27.3] compute flow directions done.
+Writing stream </var/tmp//STREAM_yJSYbY> to raster map <DEM_flow_direction>.
+[27.6] TIME writing raster map: [0.26u (83%) 0.02s (6%) 0.32 88.9%]
+Writing stream </var/tmp//STREAM_DLh7uq> to raster map <flooded_DEM>.
+[28.9] TIME writing raster map: [1.19u (97%) 0.02s (2%) 1.23 98.2%]
+Writing stream </var/tmp//STREAM_uStK5V> to raster map <DEM_sink_watershed>.
+[29.1] TIME writing raster map: [0.24u (89%) 0.02s (8%) 0.27 96.0%]
+[29.2] ------------------------------
+[29.2] COMPUTING FLOW ACCUMULATION
+[29.2] Sun Apr 14 01:53:22 2013
+
+memory size: 300.00M (314572800) bytes
+[29.2] creating sweep stream from fill output stream
+[31.3] LEN sweep stream: 2.29M (2403201) elts 183.35M (192256080) bytes [AMI_STREAM /var/tmp//STREAM_15RcWq 2403201]
+[31.3] sorting sweep stream
+[31.3] LEN pre-sort: 2.29M (2403201) elts 183.35M (192256080) bytes [AMI_STREAM /var/tmp//STREAM_15RcWq 2403201]
+[37.2] LEN sort: 2.29M (2403201) elts 183.35M (192256080) bytes [AMI_STREAM /var/tmp//STREAM_4wBj0t 2403201]
+[37.2] TIME sort: [1.94u (33%) 0.84s (14%) 5.91 47.0%]
+[37.2] TIME create sweep stream: [2.34u (29%) 1.00s (12%) 8.02 41.7%]
+[37.2] LEN (sorted) sweep stream: 2.29M (2403201) elts 183.35M (192256080) bytes [AMI_STREAM /var/tmp//STREAM_4wBj0t 2403201]
+sweeping
+[37.2] sweep:initialize flow data structure
+sweeping done
+pqsize = 0 
+[44.6] TIME sweeping: [6.93u (93%) 0.26s (3%) 7.46 96.3%]
+[44.6] LEN sweep output stream: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_wzTtJO 2403201]
+[44.7] sorting sweep output stream
+[44.7] LEN output stream: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_wzTtJO 2403201]
+[44.7] LEN pre-sort: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_wzTtJO 2403201]
+[45.5] LEN sort: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_TJnTCk 2403201]
+[45.5] TIME sort: [0.35u (43%) 0.10s (12%) 0.80 55.3%]
+[45.5] LEN output stream: 2.29M (2403201) elts 27.50M (28838412) bytes [AMI_STREAM /var/tmp//STREAM_TJnTCk 2403201]
+[45.5] TIME sorting output stream: [0.35u (43%) 0.10s (12%) 0.80 55.3%]
+[45.5] TIME compute flow accumulation: [9.62u (59%) 1.38s (8%) 16.32 67.5%]
+Writing stream </var/tmp//STREAM_TJnTCk> to raster maps <DEM_flow_accum> and <DEM_tci>.
+[47.1] TIME writing stream to raster maps: [1.34u (84%) 0.08s (5%) 1.59 88.8%]
+[47.1] TIME Total running time: : [33.07u (70%) 4.31s (9%) 47.06 79.4%]
+[47.1] end

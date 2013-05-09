@@ -1,0 +1,44 @@
+import grass.script as g
+import numpy
+import os
+import sys
+import pylab
+from scipy import ndimage
+
+pathname = os.path.dirname(sys.argv[0])        
+fullpath = os.path.abspath(pathname)
+g.use_temp_region()
+rows = 2001
+cols = 1201
+resolution = 50
+n = 4928050 #some arbitrary value
+s = n - resolution*rows
+e = 609000  #some arbitrary value
+w = e - resolution*cols
+g.run_command('g.region', flags = 'ap', n = n ,s = s, e = e, w = w,res = 50, rows = rows ,cols = cols)
+
+
+# Convert ascii DEM into grass raster map that will help in getting slope and aspect
+file_name = "/new_elev.asc"
+g.run_command('r.in.ascii', overwrite = True, flags='i', input = fullpath + file_name, output='training_DEM')
+g.run_command('r.out.ascii',flags='h',input='training_DEM@user1',output=fullpath +'/training_DEM',null='0')
+f = open('training_DEM', 'r') 
+Elev_arr = numpy.loadtxt(f,unpack = True)
+f.close()
+mask = [Elev_arr == -9999]
+Elev_arr[mask] = 0
+pylab.imsave("elevation.png",Elev_arr)
+
+f = open('new_rivers.asc', 'r') 
+Elev_arr = numpy.loadtxt(f,unpack = True)
+f.close()
+mask = [Elev_arr == -9999]
+Elev_arr[mask] = 0
+pylab.imsave("river_presence_absence.png",Elev_arr)
+
+f = open('new_land.asc', 'r') 
+Elev_arr = numpy.loadtxt(f,unpack = True)
+f.close()
+mask = [Elev_arr == -9999]
+Elev_arr[mask] = 0
+pylab.imsave("elevation.png",Elev_arr)

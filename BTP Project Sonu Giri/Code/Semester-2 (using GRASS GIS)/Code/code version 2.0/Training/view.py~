@@ -1,0 +1,20 @@
+import numpy
+import pylab
+
+filename1 = 'new_land.asc'
+filename2 = 'new_elev.asc'
+filename3 = 'new_rivers.asc'
+arr = numpy.loadtxt(filename1)
+mask = [arr==-9999]
+arr[mask] = 0
+pylab.imsave('landcover.png',arr)
+
+arr = numpy.loadtxt(filename2)
+mask = [arr==-9999]
+arr[mask] = 0
+pylab.imsave('elevation.png',arr)
+
+arr = numpy.loadtxt(filename3)
+mask = [arr==-9999]
+arr[mask] = 0
+pylab.imsave('river.png',arr)
